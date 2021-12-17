@@ -1,0 +1,716 @@
+* {
+  margin: 0px;
+  box-sizing: inherit;
+  font-family: "Jost", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+#grilla {
+  display: grid;
+  grid-template-columns: 30% 30% auto;
+  grid-template-rows: 70px 70px auto auto auto auto;
+  grid-template-areas: "cabecera cabecera cabecera" "inicio inicio inicio" "main main main" "div div div" "cards cards cards" "footer footer footer";
+  grid-column-gap: 20px;
+}
+
+.cabecera {
+  grid-area: cabecera;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  justify-content: center;
+}
+
+#div {
+  padding-left: 10px;
+}
+
+.cabecera-div {
+  padding-top: 20px;
+  padding-right: 20px;
+}
+
+.cabecera-icon {
+  width: 30px;
+  height: 25px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.cabecera-icon:hover {
+  background-color: rgba(224, 215, 215, 0.8);
+}
+
+.inicio {
+  grid-area: inicio;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.btn {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#barra-titulo {
+  color: red;
+  font-size: 28px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700px;
+  text-shadow: 1px 1px black;
+}
+
+.nav-link {
+  font-size: 22px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 900;
+}
+
+.main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 50px auto;
+  grid-template-areas: "titulo ." "articulo img";
+  background-image: url(https://ak.picdn.net/shutterstock/videos/28363579/thumb/1.jpg);
+  background-size: 100%;
+}
+
+.main-titulo {
+  grid-area: titulo;
+  padding-top: 30px;
+  padding-left: 50px;
+  align-self: center;
+  color: white;
+  font-weight: 400;
+  font-size: 28px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.main-articulo {
+  justify-content: center;
+  grid-area: articulo;
+}
+
+.articulo-parrafo {
+  width: 350px;
+  height: 280px;
+  margin-top: 20px;
+  margin-left: 50px;
+  padding: 20px;
+  background-color: rgba(223, 119, 119, 0.534);
+  font-size: 14px;
+  font-family: "Times New Roman", Times, serif;
+  color: #bdb6b6;
+  text-align: justify;
+}
+.articulo-parrafo:hover {
+  width: 350px;
+  height: 320px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.main-div {
+  width: 400px;
+  height: 400px;
+  grid-area: img;
+}
+
+.main-img {
+  width: 90%;
+  height: 90%;
+  padding-top: 25px;
+  padding-left: 25px;
+  margin-left: 30px;
+}
+
+.seccion {
+  grid-area: div;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.subtitulo-oferta {
+  height: 50px;
+  font-size: 28px;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  text-decoration: underline red;
+  text-align: center;
+  padding-top: 10px;
+  color: black;
+}
+
+.slide {
+  background: linear-gradient(0deg, #d61010 11%, #873a40 56%, #0d0c0c 100%);
+  text-align: center;
+}
+.slide img {
+  height: 300px;
+  width: 250px;
+  margin: 15px;
+}
+
+.card {
+  grid-area: cards;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(0deg, white 11%, #d61010 100%);
+  border-top: none;
+}
+.card h3 {
+  margin: 5px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 800;
+}
+.card p {
+  text-align: center;
+  color: #5f5b5b;
+  font-weight: 700;
+}
+.card a {
+  text-decoration: none;
+}
+.card a:hover {
+  color: red;
+  font-size: 18px;
+}
+
+.card-envio {
+  width: 300px;
+  height: 150px;
+  margin: 10px;
+}
+
+.card-logo {
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  margin-left: 120px;
+  margin-top: 20px;
+}
+
+.card-atencion {
+  width: 300px;
+  height: 150px;
+  margin: 20px;
+}
+
+.card-seguinos {
+  width: 300px;
+  height: 150px;
+}
+
+.seguinos-parrafo {
+  margin-top: 30px;
+}
+
+.pieDePagina {
+  grid-area: footer;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+  grid-template-rows: 90px 70px;
+  grid-template-areas: "contacto copyright pago pago" "redsocial none envio envio";
+  background-color: #222121;
+  justify-items: end;
+  align-content: center;
+}
+.pieDePagina h3 {
+  color: white;
+}
+
+.contacto-titulo {
+  font-size: 18px;
+}
+
+.contacto-medio {
+  grid-area: contacto;
+  width: 200px;
+  padding-top: 5px;
+}
+.contacto-medio p {
+  color: gray;
+  font-size: 16px;
+}
+.contacto-medio a {
+  text-decoration: none;
+  color: gray;
+}
+
+.copyright {
+  grid-area: copyright;
+  color: white;
+  padding-top: 30px;
+}
+
+.redSocial {
+  grid-area: redsocial;
+  width: 200px;
+}
+
+.redSocial-titulo {
+  font-size: 18px;
+}
+
+.mediosPago {
+  grid-area: pago;
+  width: 300px;
+  margin-right: 30px;
+  padding-top: 5px;
+}
+
+.mediosPago-titulo {
+  font-size: 18px;
+}
+
+.mediosEnvio {
+  grid-area: envio;
+  width: 300px;
+  margin-right: 30px;
+}
+
+.mediosEnvio-titulo {
+  font-size: 18px;
+}
+
+.mediosPago-logo {
+  width: 25px;
+  height: 20px;
+}
+
+.mediosEnvio-logo {
+  width: 25px;
+  height: 20px;
+}
+
+/*Estilo del html "productos"*/
+.subtitulo {
+  height: 50px;
+  text-align: center;
+  padding-top: 10px;
+  grid-column: 1/5;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 28px;
+  font-weight: 300;
+  text-transform: uppercase;
+  background-color: #9e0e0e;
+  color: white;
+  margin-bottom: 0px;
+}
+
+.bloque {
+  background-color: #222121;
+  margin: 10px;
+}
+.bloque img {
+  width: 12rem;
+  height: 15rem;
+  display: block;
+  margin: auto;
+}
+
+.div-bloque {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.contenedor-div__flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #0d0c0c;
+}
+
+.card-text {
+  color: rgba(224, 215, 215, 0.8);
+}
+
+/*Estilo del html "talles"*/
+.talles {
+  background-color: #0d0c0c;
+}
+
+.talles-subtitulo {
+  height: 50px;
+  text-align: center;
+  padding-top: 10px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 28px;
+  font-weight: 300;
+  background-color: #9e0e0e;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 2px 1px black;
+}
+
+.tabla {
+  text-align: center;
+  width: 100%;
+  height: 700px;
+  opacity: 0.7;
+}
+
+.tabla-talles {
+  width: 700px;
+  height: 600px;
+}
+
+.descripcion {
+  color: white;
+  font-weight: 500;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(0deg, #2e2828 0%, rgba(244, 10, 10, 0.7455357143) 39%, #f0b6b6 100, #2e2828 0%);
+}
+
+.descripcion-parrafo {
+  text-align: justify;
+  font-size: 18px;
+  margin: 10px 30px 10px 30px;
+  padding: 30px 20px 10px 20px;
+}
+
+/*Estilo del html "cuidado de las prendas"*/
+.cuidado {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 10% 90%;
+  grid-template-areas: "subtitulo2 subtitulo2" "article video";
+  align-items: center;
+  background-color: #0d0c0c;
+}
+
+.seccion-subtitulo {
+  grid-area: subtitulo2;
+  text-transform: uppercase;
+  color: white;
+  background-color: #9e0e0e;
+  height: 50px;
+  font-size: 28px;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.cuidado-prendas {
+  grid-area: article;
+  text-align: justify;
+  font-size: 18px;
+  margin: 50px;
+  padding: 30px;
+  border-radius: 6px;
+  color: #b3aaaa;
+  background-color: rgba(214, 16, 16, 0.7);
+  width: 30vw;
+  height: 60vh;
+}
+
+.cuidado-video {
+  grid-area: video;
+  width: 400px;
+  height: 420px;
+}
+
+.video {
+  border-radius: 8px;
+  height: 400px;
+  width: 300px;
+}
+
+/*Estilo del html "Contacto"*/
+.seccion-formulario {
+  width: 100%;
+  height: 600px;
+  background-color: #0d0c0c;
+}
+
+.formulario {
+  background-color: #f6ece8;
+  width: 50%;
+  height: 500px;
+  margin-left: 25%;
+}
+
+fieldset {
+  height: 500px;
+  border-radius: 8px;
+  padding-top: 20px;
+  font-weight: bold;
+  color: black;
+}
+
+.formulario-nombre {
+  margin: 5px 5px 10px 5px;
+  padding: 5px;
+}
+
+.formulario-telefono {
+  margin: 5px 5px 10px 5px;
+  padding: 5px;
+}
+
+.formulario-mail {
+  margin: 5px 5px 10px 5px;
+  padding: 5px;
+}
+
+.newsletter {
+  margin: 10px 5px 20px 5px;
+  padding: 5px;
+}
+
+.textarea {
+  margin: 5px 5px 10px 5px;
+  padding: 5px;
+}
+
+.formulario-boton {
+  margin: 10px 0px 5px 10px;
+  text-align-last: left;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 576px) {
+  #grilla {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas: "cabecera" "inicio" "main" "div" "cards" "footer";
+  }
+
+  .cabecera {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    align-content: flex-end;
+  }
+
+  .cabecera-div {
+    display: flex;
+    padding-right: 10px;
+  }
+
+  .cabecera-icon {
+    width: 25px;
+    height: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .main {
+    width: 100%;
+    border-right: 0px;
+    background-color: rgba(158, 206, 207, 0.5);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-titulo {
+    font-size: 16px;
+    font-weight: 600;
+    padding-top: 10px;
+    padding-left: 0px;
+    align-self: center;
+  }
+
+  .main-articulo {
+    justify-content: center;
+    margin-left: 1em;
+    margin-right: 0.1em;
+  }
+
+  .articulo-parrafo {
+    width: 91%;
+    height: auto;
+    border-radius: 0px;
+    border: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    padding: 13px;
+    font-size: 12px;
+    text-align: justify;
+  }
+  .articulo-parrafo:hover {
+    width: 90%;
+    height: 80%;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .main-div {
+    width: 90%;
+    height: auto;
+  }
+
+  .main-img {
+    width: 80%;
+    height: 80%;
+    padding-top: 15px;
+    padding-left: 35px;
+  }
+
+  .seccion-subtitulo {
+    height: 50px;
+    text-align: center;
+    padding-top: 10px;
+    text-shadow: none;
+  }
+
+  .pieDePagina {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .pieDePagina h3 {
+    color: white;
+  }
+
+  .contacto-medio {
+    width: 100%;
+    padding-top: 5px;
+    align-content: center;
+  }
+  .contacto-medio p {
+    color: gray;
+    font-size: 18px;
+  }
+  .contacto-medio a {
+    text-decoration: none;
+    color: gray;
+  }
+
+  .copyright {
+    width: 100%;
+    padding-top: 30px;
+  }
+
+  .redSocial {
+    width: 100%;
+    padding-top: 10px;
+  }
+
+  .mediosPago {
+    width: 100%;
+    margin-right: 0px;
+    padding-top: 5px;
+  }
+
+  .mediosEnvio {
+    width: 100%;
+    margin-right: 0px;
+    margin-bottom: 10px;
+  }
+
+  /*html TALLES*/
+  .seccion-tabla {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .tabla {
+    width: 100%;
+    height: 70%;
+    margin-left: 0px;
+    background-color: #7ec4c7;
+  }
+
+  .seccion-subtitulo {
+    width: 100%;
+    height: 10%;
+  }
+
+  .tabla-talles {
+    width: 80%;
+    height: 80%;
+    margin-left: 0px;
+  }
+
+  .descripcion {
+    width: 100%;
+    height: 30%;
+  }
+
+  .descripcion-parrafo {
+    text-align: justify;
+    font-size: 14px;
+    margin: 10px 20px 10px 20px;
+    padding: 20px;
+  }
+
+  /* html CUIDADO DE PRENDAS*/
+  .cuidado {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .seccion-subtitulo {
+    grid-area: subtitulo2;
+  }
+
+  .cuidado-prendas {
+    text-align: justify;
+    font-size: 14px;
+    margin: 0px;
+    padding: 10px;
+    width: 95%;
+    height: auto;
+    border: 0px;
+    border-radius: 0px;
+  }
+
+  .cuidado-video {
+    grid-area: video;
+    width: 100%;
+    height: 50%;
+  }
+
+  .video {
+    border-radius: 0px;
+    height: 100%;
+    width: 100%;
+  }
+
+  /*html CONTACTO*/
+  .seccion-formulario {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+
+  .formulario {
+    width: 90%;
+    height: 90% px;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+  fieldset {
+    height: 100%;
+    border-radius: 0px;
+    padding-top: 10px;
+  }
+
+  .contenedor-div__flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: scroll;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
