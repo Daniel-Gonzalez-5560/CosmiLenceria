@@ -5,6 +5,8 @@
     font-family: 'Roboto', sans-serif;
 }
 
+
+
 //Declaracion de variables//
 
 $color-fondo: rgba(13,12,12,1);
@@ -167,6 +169,7 @@ $fondo-titulo: rgb(158, 14, 14);
         }
 }
 
+
 .card {
     grid-area: cards;
     display: flex;
@@ -200,11 +203,25 @@ $fondo-titulo: rgb(158, 14, 14);
         }
 }
 
-.card-envio {
-    width: 300px;
-    height: 150px;
-    margin:10px;
+//Mixins
+@mixin card ($width,$height,$m) {
+    width: $width;
+    height: $height;
+    margin: $m;
 }
+
+.card-envio {
+    @include card (300px,150px,20px);
+}
+
+.card-atencion {
+    @include card (300px,150px,20px);
+}
+
+.card-seguinos {
+    @include card (300px,150px,20px);
+}
+
 .card-logo {
     width: 40px;
     height: 40px;
@@ -213,20 +230,10 @@ $fondo-titulo: rgb(158, 14, 14);
     margin-top: 20px;
     
 }
-.card-atencion {
-    width: 300px;
-    height: 150px;
-    margin: 20px;
-}
-
-.card-seguinos {
-    width: 300px;
-    height: 150px;
-}
-
 .seguinos-parrafo {
     margin-top: 30px;
 }
+//comienza el footer
 .pieDePagina {
     grid-area: footer;
     display: grid;
@@ -243,9 +250,6 @@ $fondo-titulo: rgb(158, 14, 14);
         }
 }
 
-.contacto-titulo {
-    font-size: 18px;
-}
 .contacto-medio {
     grid-area: contacto;
     width: 200px;
@@ -269,34 +273,23 @@ $fondo-titulo: rgb(158, 14, 14);
     grid-area: redsocial;
     width: 200px;
 }
-.redSocial-titulo {
-    font-size: 18px;
-}
+
 .mediosPago {
     grid-area: pago;
     width: 300px;
     margin-right: 30px;
     padding-top: 5px;
 }
-.mediosPago-titulo {
-    font-size: 18px;
-}
+
 .mediosEnvio {
     grid-area: envio;
     width: 300px;
     margin-right: 30px;
 }
-.mediosEnvio-titulo {
-    font-size: 18px;
-}
-.mediosPago-logo {
-    width: 25px;
-    height: 20px;
-}
-.mediosEnvio-logo {
-    width: 25px;
-    height: 20px; 
-}
+//import// 
+@import "_footer";
+
+
 
 /*Estilo del html "productos"*/
 .subtitulo {

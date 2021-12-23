@@ -1,0 +1,43 @@
+
+//Maps
+$Textos:(
+    tFuente: 16px,
+    cLetra: rgb(103, 109, 103),
+    tLetra: verdana
+);
+
+//accedo a las llaves
+.pieDePagina p, a {
+    font-size: map-get($Textos, tFuente );
+    color: map-get($Textos, cLetra );
+    font-family: map-get($Textos, tLetra );
+}
+
+//Extend
+.mediosPago-logo {
+    width: 25px;
+    height: 20px;
+}
+
+.mediosEnvio-logo {
+    @extend .mediosPago-logo
+}
+
+.contacto-titulo {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.redSocial-titulo {
+    @extend .contacto-titulo;
+}
+
+.mediosPago-titulo {
+    @extend .contacto-titulo;
+}
+
+.mediosEnvio-titulo {
+    @extend .contacto-titulo;
+}

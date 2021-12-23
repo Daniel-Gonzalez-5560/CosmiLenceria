@@ -187,15 +187,7 @@
 .card-envio {
   width: 300px;
   height: 150px;
-  margin: 10px;
-}
-
-.card-logo {
-  width: 40px;
-  height: 40px;
-  justify-content: center;
-  margin-left: 120px;
-  margin-top: 20px;
+  margin: 20px;
 }
 
 .card-atencion {
@@ -207,6 +199,15 @@
 .card-seguinos {
   width: 300px;
   height: 150px;
+  margin: 20px;
+}
+
+.card-logo {
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  margin-left: 120px;
+  margin-top: 20px;
 }
 
 .seguinos-parrafo {
@@ -225,10 +226,6 @@
 }
 .pieDePagina h3 {
   color: white;
-}
-
-.contacto-titulo {
-  font-size: 18px;
 }
 
 .contacto-medio {
@@ -256,19 +253,11 @@
   width: 200px;
 }
 
-.redSocial-titulo {
-  font-size: 18px;
-}
-
 .mediosPago {
   grid-area: pago;
   width: 300px;
   margin-right: 30px;
   padding-top: 5px;
-}
-
-.mediosPago-titulo {
-  font-size: 18px;
 }
 
 .mediosEnvio {
@@ -277,18 +266,22 @@
   margin-right: 30px;
 }
 
-.mediosEnvio-titulo {
+.pieDePagina p, a {
+  font-size: 16px;
+  color: #676d67;
+  font-family: verdana;
+}
+
+.mediosPago-logo, .mediosEnvio-logo {
+  width: 25px;
+  height: 20px;
+}
+
+.contacto-titulo, .mediosEnvio-titulo, .mediosPago-titulo, .redSocial-titulo {
+  font-family: "Times New Roman", Times, serif;
   font-size: 18px;
-}
-
-.mediosPago-logo {
-  width: 25px;
-  height: 20px;
-}
-
-.mediosEnvio-logo {
-  width: 25px;
-  height: 20px;
+  text-transform: uppercase;
+  color: white;
 }
 
 /*Estilo del html "productos"*/
