@@ -170,7 +170,7 @@ $fondo-titulo: rgb(158, 14, 14);
 }
 
 
-.card {
+.cards {
     grid-area: cards;
     display: flex;
     flex-direction: row;
@@ -307,7 +307,7 @@ $fondo-titulo: rgb(158, 14, 14);
 }
 .bloque {
     background-color: rgb(34,33,33);
-    margin: 10px;
+    
 
         img {
             width: 12rem;
@@ -320,6 +320,7 @@ $fondo-titulo: rgb(158, 14, 14);
 .div-bloque {
     margin-top: 20px;
     margin-bottom: 20px;
+    border: none;
 }
 
 .contenedor-div__flex {
@@ -328,10 +329,16 @@ $fondo-titulo: rgb(158, 14, 14);
     flex-wrap: wrap;
     justify-content: space-around;
     background-color: $color-fondo;
+
 }
 
 .card-text {
     color: rgba(224, 215, 215, 0.8);
+}
+
+.card-link {
+    text-decoration: none;
+    color: red;
 }
 
 /*Estilo del html "talles"*/
@@ -383,9 +390,10 @@ opacity: 0.7;
 
 .cuidado {
     width: 100%;
+    height: 800px;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 10% 90%;
+    grid-template-rows: 7% 90%;
     grid-template-areas: "subtitulo2 subtitulo2"
     "article video";
     align-items: center;
@@ -396,7 +404,7 @@ opacity: 0.7;
     text-transform: uppercase;
     color: $color-titulo;
     background-color: $fondo-titulo;
-    height: 50px;
+    height: 100%;
     font-size: $size-titulos;
     font-weight: bold;
     font-family: $font-family-titulos;
@@ -411,22 +419,27 @@ opacity: 0.7;
     padding: 30px;
     border-radius: 6px;
     color: rgb(179, 170, 170);
-    background-color: rgba(214,16,16,0.7);
-    width: 30vw;
-    height: 60vh;
+    width: 40vw;
+    height: 75vh;
+
+    span {
+        display: block;
+        padding: 5px;
+    }
 }
 
 .cuidado-video {
     grid-area: video;
-    width: 400px;
-    height: 420px;
-    
+    width: 550px;
+    height: 100%;
+    padding-left: 100px;
 }
 
 .video {
     border-radius: 8px;
-    height: 400px;
-    width: 300px;
+    height: 50%;
+    width: 400px;
+    padding-top: 100px;
 }
 
 /*Estilo del html "Contacto"*/
@@ -434,47 +447,59 @@ opacity: 0.7;
 .seccion-formulario {
     width: 100%;
     height: 600px;
-    background-color: $color-fondo;
+    background-color: black;
 }
 
 .formulario {
-    background-color: rgb(246, 236, 232);
     width: 50%;
     height: 500px;
     margin-left: 25%;
+    padding-top: 50px;
 }
 
 fieldset {
-    height:500px ;
-    border-radius: 8px;
+    height:480px ;
     padding-top: 20px;
     font-weight: bold ;
-    color: black;
+    color: white;
+    background-image:url(https://ak.picdn.net/shutterstock/videos/28363579/thumb/1.jpg);
+    background-size: 100%;
 }
 
+legend {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration-color: rgba(214,16,16,0.7);
+}
 .formulario-nombre {
     margin: 5px 5px 10px 5px ;
     padding: 5px;
 }
 
 .formulario-telefono {
-    margin: 5px 5px 10px 5px ;
-    padding: 5px;
+    @extend .formulario-nombre;
 }
 
 .formulario-mail {
-    margin: 5px 5px 10px 5px ;
-    padding: 5px;
+    @extend .formulario-nombre;
 }
 
 .newsletter {
     margin: 10px 5px 20px 5px ;
     padding: 5px; 
+
+    h3 {
+        font-weight: bold;
+        font-family: 'Times New Roman', Times, serif
+    }
 }
 
 .textarea {
-    margin: 5px 5px 10px 5px ;
-    padding: 5px;
+    @extend .formulario-nombre;
+
+    textarea {
+        width: 300px;
+    }
 }
 
 .formulario-boton {
@@ -482,6 +507,31 @@ fieldset {
     text-align-last: left; 
 }
 
+.boton-enviar {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    font-size: 16px;
+    font-weight: 800;
+
+        &:hover {
+            background-color: rgb(34,33,33);
+            color: white;
+            border: 2px solid white;
+        }
+}
+.boton-cancelar {   
+    background-color: white;
+    color: rgba(214,16,16,1);
+    font-weight: 800;
+    border: 1px solid rgba(214,16,16,1);
+
+        &:hover {
+            background-color: rgba(214,16,16,1);
+            color: white;
+            border: 2px solid white;
+        }
+}
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 576px) {
     #grilla {
@@ -675,8 +725,9 @@ fieldset {
     
     .video {
         border-radius: 0px;
-        height: 100%;
-        width: 100%;
+        padding-top: 20px;
+        height: 80%;
+        width: 80%;
     }
 
     /*html CONTACTO*/
@@ -690,13 +741,20 @@ fieldset {
     .formulario {
         width: 90%;
         height: 90%px;
-        margin-top: 20px;
         margin-left: 20px;
+        padding-bottom: 20px;
     } 
+
+    .formulario-nombre label{
+        display: block;
+    }
+
     fieldset {
         height: 100% ;
         border-radius: 0px;
-        padding-top: 10px;
+        text-align: start;
+        padding-top: 0px;
+        font-size: 14px;
     }
     .contenedor-div__flex {
         display: flex;
@@ -704,4 +762,11 @@ fieldset {
         flex-wrap: wrap;
         overflow:scroll;
     } 
+    .newsletter h3 {
+        font-size: 16px;
+    }
+    .textarea h3 {
+        font-size: 16px;
+    }
+    
 }

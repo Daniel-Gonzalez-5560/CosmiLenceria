@@ -155,7 +155,7 @@
   margin: 15px;
 }
 
-.card {
+.cards {
   grid-area: cards;
   display: flex;
   flex-direction: row;
@@ -165,21 +165,21 @@
   background: linear-gradient(0deg, white 11%, #d61010 100%);
   border-top: none;
 }
-.card h3 {
+.cards h3 {
   margin: 5px;
   text-align: center;
   font-size: 18px;
   font-weight: 800;
 }
-.card p {
+.cards p {
   text-align: center;
   color: #5f5b5b;
   font-weight: 700;
 }
-.card a {
+.cards a {
   text-decoration: none;
 }
-.card a:hover {
+.cards a:hover {
   color: red;
   font-size: 18px;
 }
@@ -301,7 +301,6 @@
 
 .bloque {
   background-color: #222121;
-  margin: 10px;
 }
 .bloque img {
   width: 12rem;
@@ -313,6 +312,7 @@
 .div-bloque {
   margin-top: 20px;
   margin-bottom: 20px;
+  border: none;
 }
 
 .contenedor-div__flex {
@@ -325,6 +325,11 @@
 
 .card-text {
   color: rgba(224, 215, 215, 0.8);
+}
+
+.card-link {
+  text-decoration: none;
+  color: red;
 }
 
 /*Estilo del html "talles"*/
@@ -375,9 +380,10 @@
 /*Estilo del html "cuidado de las prendas"*/
 .cuidado {
   width: 100%;
+  height: 800px;
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: 10% 90%;
+  grid-template-rows: 7% 90%;
   grid-template-areas: "subtitulo2 subtitulo2" "article video";
   align-items: center;
   background-color: #0d0c0c;
@@ -388,7 +394,7 @@
   text-transform: uppercase;
   color: white;
   background-color: #9e0e0e;
-  height: 50px;
+  height: 100%;
   font-size: 28px;
   font-weight: bold;
   font-family: "Times New Roman", Times, serif;
@@ -404,56 +410,58 @@
   padding: 30px;
   border-radius: 6px;
   color: #b3aaaa;
-  background-color: rgba(214, 16, 16, 0.7);
-  width: 30vw;
-  height: 60vh;
+  width: 40vw;
+  height: 75vh;
+}
+.cuidado-prendas span {
+  display: block;
+  padding: 5px;
 }
 
 .cuidado-video {
   grid-area: video;
-  width: 400px;
-  height: 420px;
+  width: 550px;
+  height: 100%;
+  padding-left: 100px;
 }
 
 .video {
   border-radius: 8px;
-  height: 400px;
-  width: 300px;
+  height: 50%;
+  width: 400px;
+  padding-top: 100px;
 }
 
 /*Estilo del html "Contacto"*/
 .seccion-formulario {
   width: 100%;
   height: 600px;
-  background-color: #0d0c0c;
+  background-color: black;
 }
 
 .formulario {
-  background-color: #f6ece8;
   width: 50%;
   height: 500px;
   margin-left: 25%;
+  padding-top: 50px;
 }
 
 fieldset {
-  height: 500px;
-  border-radius: 8px;
+  height: 480px;
   padding-top: 20px;
   font-weight: bold;
-  color: black;
+  color: white;
+  background-image: url(https://ak.picdn.net/shutterstock/videos/28363579/thumb/1.jpg);
+  background-size: 100%;
 }
 
-.formulario-nombre {
-  margin: 5px 5px 10px 5px;
-  padding: 5px;
+legend {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  text-decoration-color: rgba(214, 16, 16, 0.7);
 }
 
-.formulario-telefono {
-  margin: 5px 5px 10px 5px;
-  padding: 5px;
-}
-
-.formulario-mail {
+.formulario-nombre, .textarea, .formulario-mail, .formulario-telefono {
   margin: 5px 5px 10px 5px;
   padding: 5px;
 }
@@ -462,15 +470,43 @@ fieldset {
   margin: 10px 5px 20px 5px;
   padding: 5px;
 }
+.newsletter h3 {
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+}
 
-.textarea {
-  margin: 5px 5px 10px 5px;
-  padding: 5px;
+.textarea textarea {
+  width: 300px;
 }
 
 .formulario-boton {
   margin: 10px 0px 5px 10px;
   text-align-last: left;
+}
+
+.boton-enviar {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  font-size: 16px;
+  font-weight: 800;
+}
+.boton-enviar:hover {
+  background-color: #222121;
+  color: white;
+  border: 2px solid white;
+}
+
+.boton-cancelar {
+  background-color: white;
+  color: #d61010;
+  font-weight: 800;
+  border: 1px solid #d61010;
+}
+.boton-cancelar:hover {
+  background-color: #d61010;
+  color: white;
+  border: 2px solid white;
 }
 
 /* Smartphones (portrait and landscape) ----------- */
@@ -674,8 +710,9 @@ fieldset {
 
   .video {
     border-radius: 0px;
-    height: 100%;
-    width: 100%;
+    padding-top: 20px;
+    height: 80%;
+    width: 80%;
   }
 
   /*html CONTACTO*/
@@ -688,14 +725,20 @@ fieldset {
   .formulario {
     width: 90%;
     height: 90% px;
-    margin-top: 20px;
     margin-left: 20px;
+    padding-bottom: 20px;
+  }
+
+  .formulario-nombre label, .formulario-telefono label, .formulario-mail label, .textarea label {
+    display: block;
   }
 
   fieldset {
     height: 100%;
     border-radius: 0px;
-    padding-top: 10px;
+    text-align: start;
+    padding-top: 0px;
+    font-size: 14px;
   }
 
   .contenedor-div__flex {
@@ -703,6 +746,14 @@ fieldset {
     flex-direction: row;
     flex-wrap: wrap;
     overflow: scroll;
+  }
+
+  .newsletter h3 {
+    font-size: 16px;
+  }
+
+  .textarea h3 {
+    font-size: 16px;
   }
 }
 
