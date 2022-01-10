@@ -323,6 +323,16 @@
   background-color: #0d0c0c;
 }
 
+.card-subtitle {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+}
+.card-subtitle:hover {
+  color: yellowgreen;
+}
+
 .card-text {
   color: rgba(224, 215, 215, 0.8);
 }
@@ -360,6 +370,7 @@
 .tabla-talles {
   width: 700px;
   height: 600px;
+  padding-top: 30px;
 }
 
 .descripcion {
@@ -367,6 +378,7 @@
   font-weight: 500;
   width: 100%;
   height: 200px;
+  padding-bottom: 20px;
   background: linear-gradient(0deg, #2e2828 0%, rgba(244, 10, 10, 0.7455357143) 39%, #f0b6b6 100, #2e2828 0%);
 }
 
@@ -689,6 +701,252 @@ legend {
 
   .seccion-subtitulo {
     grid-area: subtitulo2;
+  }
+
+  .cuidado-prendas {
+    text-align: justify;
+    font-size: 14px;
+    margin: 0px;
+    padding: 10px;
+    width: 95%;
+    height: auto;
+    border: 0px;
+    border-radius: 0px;
+  }
+
+  .cuidado-video {
+    grid-area: video;
+    width: 100%;
+    height: 50%;
+  }
+
+  .video {
+    border-radius: 0px;
+    padding-top: 20px;
+    height: 80%;
+    width: 80%;
+  }
+
+  /*html CONTACTO*/
+  .seccion-formulario {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+
+  .formulario {
+    width: 90%;
+    height: 90% px;
+    margin-left: 20px;
+    padding-bottom: 20px;
+  }
+
+  .formulario-nombre label, .formulario-telefono label, .formulario-mail label, .textarea label {
+    display: block;
+  }
+
+  fieldset {
+    height: 100%;
+    border-radius: 0px;
+    text-align: start;
+    padding-top: 0px;
+    font-size: 14px;
+  }
+
+  .contenedor-div__flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: scroll;
+  }
+
+  .newsletter h3 {
+    font-size: 16px;
+  }
+
+  .textarea h3 {
+    font-size: 16px;
+  }
+}
+/* Tablet */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  #grilla {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas: "cabecera" "inicio" "main" "div" "cards" "footer";
+  }
+
+  .cabecera {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    align-content: flex-end;
+  }
+
+  .cabecera-div {
+    display: flex;
+    padding-right: 10px;
+  }
+
+  .cabecera-icon {
+    width: 25px;
+    height: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .main {
+    width: 100%;
+    border-right: 0px;
+    background-color: rgba(158, 206, 207, 0.5);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-titulo {
+    font-size: 24px;
+    font-weight: 600;
+    padding-top: 10px;
+    padding-left: 0px;
+    align-self: center;
+  }
+
+  .main-articulo {
+    justify-content: center;
+    margin-left: 1em;
+    margin-right: 0.1em;
+  }
+
+  .articulo-parrafo {
+    width: 91%;
+    height: 180px;
+    border-radius: 0px;
+    border: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    padding: 13px;
+    font-size: 16px;
+    color: white;
+    text-align: justify;
+  }
+  .articulo-parrafo:hover {
+    width: 90%;
+    height: 210px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .main-div {
+    width: 90%;
+    height: auto;
+  }
+
+  .main-img {
+    width: 60%;
+    height: 60%;
+    padding: 15px 0px 20px 150px;
+  }
+
+  .seccion-subtitulo {
+    height: 50px;
+    text-align: center;
+    padding-top: 10px;
+    text-shadow: none;
+  }
+
+  .pieDePagina {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .pieDePagina h3 {
+    color: white;
+  }
+
+  .contacto-medio {
+    width: 100%;
+    padding-top: 5px;
+    align-content: center;
+  }
+  .contacto-medio p {
+    color: gray;
+    font-size: 18px;
+  }
+  .contacto-medio a {
+    text-decoration: none;
+    color: gray;
+  }
+
+  .copyright {
+    width: 100%;
+    padding-top: 30px;
+  }
+
+  .redSocial {
+    width: 100%;
+    padding-top: 10px;
+  }
+
+  .mediosPago {
+    width: 100%;
+    margin-right: 0px;
+    padding-top: 5px;
+  }
+
+  .mediosEnvio {
+    width: 100%;
+    margin-right: 0px;
+    margin-bottom: 10px;
+  }
+
+  /*html TALLES*/
+  .seccion-tabla {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .tabla {
+    width: 100%;
+    height: 70%;
+    margin-left: 0px;
+  }
+
+  .seccion-subtitulo {
+    width: 100%;
+    height: 10%;
+  }
+
+  .tabla-talles {
+    width: 80%;
+    height: 80%;
+    margin-left: 0px;
+  }
+
+  .descripcion {
+    width: 100%;
+    height: 30%;
+  }
+
+  .descripcion-parrafo {
+    text-align: justify;
+    font-size: 14px;
+    margin: 10px 20px 10px 20px;
+    padding: 20px;
+  }
+
+  /* html CUIDADO DE PRENDAS*/
+  .cuidado {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .seccion-subtitulo {
+    height: 50px;
   }
 
   .cuidado-prendas {
